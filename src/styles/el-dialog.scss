@@ -1,0 +1,106 @@
+@import '@/styles/variables.scss';
+
+//dialog样式修改
+.qa-dialog {
+  .el-dialog__header {
+      > div {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          > span {
+              font-size: 15px;
+              color: $primary;
+              font-weight: bold;
+          }
+          i, .svg-icon {
+              font-size: 22px;
+              color: $menuActiveText;
+              // font-size: 8px;
+              margin-right: 10px;
+          }
+      }
+      border-bottom: 1px solid $lighterBorder;
+  }
+  .el-dialog__body {
+      padding-top: 10px;
+      // span {
+      //     @include spanStyle(13px, #9b9393);
+      // }
+  }
+  .el-dialog__footer{
+    .dialog-footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;      
+    }
+    .dialog-footer-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;      
+    }
+  }
+}
+
+.qa-light-dialog {
+  .el-dialog__header {
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: $primaryText;
+        font-weight: 500;
+        i, .svg-icon {
+            margin-right: 10px;
+        }
+    }
+    border-bottom: 1px solid $lighterBorder;
+  }
+}
+//dialog样式修改
+.dig-light-dialog {
+  .el-dialog__header {
+      > div {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          > span {
+              font-size: 15px;
+              color: $primary;
+              font-weight: bold;
+          }
+          i, .svg-icon {
+              font-size: 22px;
+              color: $menuActiveText;
+              // font-size: 8px;
+              margin-right: 10px;
+          }
+      }
+      border-bottom: 1px solid $lighterBorder;
+  }
+  .el-dialog__body {
+      padding-top: 10px;
+      // span {
+      //     @include spanStyle(13px, #9b9393);
+      // }
+  }
+  .el-dialog__footer, .dialog-footer{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+}
+
+.qa-without-border-dialog {
+  .el-dialog__header {
+    > div  {
+      color: $primary;
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+  .el-dialog__body {
+    padding-top: 10px;
+  }
+}

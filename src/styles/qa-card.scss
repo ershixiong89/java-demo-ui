@@ -1,0 +1,83 @@
+@import '@/styles/mixin.scss';
+
+.qa-card {
+  .el-card__header {
+    > div {
+      @include flexStyle(space-between, center);
+      .qa-card-title {
+        i, .svg-icon {
+          margin-right: 10px;
+          font-size: 14px;
+          color: $primary;
+          font-weight: bold;
+        }
+        span {
+          // font-family: monospace, monospace;
+          font-size: 14px;
+          color: $primaryText;
+          letter-spacing: 0.5px;
+          font-weight: bold;
+        }
+
+        .remark {
+          font-size: 13px;
+          margin-left: 10px;
+          color: $secondaryText;
+        }
+      }
+      .qa-card-title-remark {
+        font-size: 28px;
+        font-weight: bold;
+        color: $secondaryText;
+      }
+    }
+  } 
+}
+
+.qa-query-card {
+  .el-card__header {
+    > div {
+      @include flexStyle(space-between, center);
+      > span {
+        font-size: 14px;
+        color: $primaryText;
+        font-weight: bold;
+      }
+    }
+  }
+  .el-card__body {
+    padding-left: 40px;
+    .detail-query-setting__info {
+      > .el-col {
+        > div {
+          margin: 10px 0;
+          @include flexStyle(flex-start, center);
+          > label {
+            width: 120px;
+            display: inline-block;
+            font-size: 13px;
+            // font-weight: normal;
+            color: $regularText;
+          }
+
+          .checkbox-continaer {
+            > span {
+              margin-left: 20px;
+              color: $placheholderText;
+              font-size: 13px;
+            }
+          }
+          .text-container {
+            > div {
+              .text-container__plain {
+                font-size: 13px;
+                font-weight: normal;
+                color: $regularText;
+              }
+            }
+          }
+        }        
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import '@/styles/animation.scss';
+@import '@/styles/variables.scss';
+
+.qa-steps-light {
+  .el-step__head {
+    .el-step__line {
+      height: 1.5px;
+    }
+    .el-step__icon {
+      transition: transform .3s;
+      border-width: 1px;
+    }
+    &.is-finish {
+      .el-step__icon:before {
+        position: absolute;
+        content: "";
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 1px solid $primary;
+        opacity: 0;
+        z-index: 0;
+        @include setAnimation(scale_from_little 2.5s ease-in 0s infinite);
+      }
+      .el-step__icon:after {
+        position: absolute;
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-color: $primary;
+        border-radius: 50%;
+        opacity: 0;
+        z-index: -1;
+        @include setAnimation(scale_up_litter 2.5s ease-in-out 0s infinite);
+      }        
+    }
+  }
+  .el-step__main {
+    .el-step__title {
+      font-weight: normal;
+      // font-weight: 500;
+    }
+  }    
+}
+
+.qa-steps {
+  .el-step__head {
+    &.is-success {
+      .el-step__line,.el-step__icon {
+        background-color: $success;
+      }
+    }
+    &.is-error {
+      .el-step__line,.el-step__icon {
+        background-color: $danger;
+      }
+    }
+    &.is-finish {
+      .el-step__line,.el-step__icon {
+        background-color: $primary;
+      }        
+    }
+    &.is-process {
+      .el-step__line,.el-step__icon {
+        background-color: $primaryText;
+      }
+    }
+    &.is-wait {
+      .el-step__line,.el-step__icon {
+        background-color: #c0c4cc;
+      }
+    }
+    .el-step__line {
+      height: 3px;
+    }
+    .el-step__icon {
+      transition: transform .3s;
+      .el-step__icon-inner {
+        color: $white;
+      }
+    }
+    &.is-finish {
+      .el-step__icon:before {
+        position: absolute;
+        content: "";
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 1px solid $primary;
+        opacity: 0;
+        z-index: 0;
+        @include setAnimation(scale_from_little 2.5s ease-in 0s infinite);
+      }
+      .el-step__icon:after {
+        position: absolute;
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-color: $primary;
+        border-radius: 50%;
+        opacity: 0;
+        z-index: -1;
+        @include setAnimation(scale_up_litter 2.5s ease-in-out 0s infinite);
+      }        
+    }
+  }
+  .el-step__main {
+    .el-step__title {
+      font-weight: 500;
+    }
+  }    
+}

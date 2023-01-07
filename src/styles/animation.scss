@@ -1,0 +1,232 @@
+@mixin setAnimation($animation...){
+  animation: $animation;    /*IE*/
+  -webkit-animation: $animation;    /* Safari 和 Chrome */
+  -moz-animation: $animation;   /* Firefox */
+  // -o-animation: $animation;   /* Opera */
+  // -ms-animation: $animation;
+}
+
+//上升
+@keyframes slide_up {
+  from {transform: translateY(20px); opacity: 0;}
+  to {transform: translateY(0px); opacity: 1;}
+}
+@-webkit-keyframes slide_up {
+  from {-webkit-transform: translateY(20px); opacity: 0;}
+  to {-webkit-transform: translateY(0px); opacity: 1;}
+}
+@-moz-keyframes slide_up {
+  from {-moz-transform: translateY(20px); opacity: 0;}
+  to {-moz-transform: translateY(0px); opacity: 1;}
+}
+
+//下降-big
+@keyframes slide_down__big {
+  from {transform: translateY(-40px); opacity: 0;}
+  to {transform: translateY(0px); opacity: 1;}
+}
+@-webkit-keyframes slide_down__big {
+  from {-webkit-transform: translateY(-40px); opacity: 0;}
+  to {-webkit-transform: translateY(0px); opacity: 1;}
+}
+@-moz-keyframes slide_down__big {
+  from {-moz-transform: translateY(-40px); opacity: 0;}
+  to {-moz-transform: translateY(0px); opacity: 1;}
+}
+
+//下降-big
+@keyframes slide_down_from_top{
+  from {transform: translateY(0px); opacity: 0.4;}
+  to {transform: translateY(100px); opacity: 0;}
+}
+@-webkit-keyframes slide_down_from_top {
+  from {-webkit-transform: translateY(0px); opacity: 0.4;}
+  to {-webkit-transform: translateY(100px); opacity: 0;}
+}
+@-moz-keyframes slide_down_from_top {
+  from {-moz-transform: translateY(0px); opacity: 0.4;}
+  to {-moz-transform: translateY(100px); opacity: 0;}
+}
+
+//放大
+@keyframes scale_up{
+  from {transform: scale(1); opacity: 0.6;}
+  to {transform: scale(3); opacity: 0;}
+}
+@-webkit-keyframes scale_up {
+  from {-webkit-transform: scale(1); opacity: 0.6;}
+  to {-webkit-transform: scale(3); opacity: 0;}
+}
+@-moz-keyframes scale_up {
+  from {-moz-transform: scale(1); opacity: 0.6;}
+  to {-moz-transform: scale(3); opacity: 0;}
+}
+
+// 从左边出现
+@keyframes show_from_left{
+  from {transform: translateX(-70px); opacity: 0;}
+  to {transform: translateX(0px); opacity: 1;}
+}
+@-webkit-keyframes show_from_left {
+  from {-webkit-transform: translateX(-70px); opacity: 0;}
+  to {-webkit-transform: translateX(0px); opacity: 1;}
+}
+@-moz-keyframes show_from_left {
+  from {-moz-transform: translateX(-70px); opacity: 0;}
+  to {-moz-transform: translateX(0px); opacity: 1;}
+}
+
+// 从右边出现
+@keyframes show_from_right{
+  from {transform: translateX(70px); opacity: 0;}
+  to {transform: translateX(0px); opacity: 1;}
+}
+@-webkit-keyframes show_from_right {
+  from {-webkit-transform: translateX(70px); opacity: 0;}
+  to {-webkit-transform: translateX(0px); opacity: 1;}
+}
+@-moz-keyframes show_from_right {
+  from {-moz-transform: translateX(70px); opacity: 0;}
+  to {-moz-transform: translateX(0px); opacity: 1;}
+}
+
+// y轴旋转出现
+@keyframes show_rotate_y{
+  from {transform: rotate3d(0, 1, 0, 90deg); opacity: 0;}
+  to {transform: rotate3d(0, 1, 0, 0); opacity: 1;}
+}
+@-webkit-keyframes show_rotate_y {
+  from {-webkit-transform: rotate3d(0, 1, 0, 90deg); opacity: 0;}
+  to {-webkit-transform: rotate3d(0, 1, 0, 0); opacity: 1;}
+}
+@-moz-keyframes show_rotate_y {
+  from {-moz-transform: rotate3d(0, 1, 0, 90deg); opacity: 0;}
+  to {-moz-transform: rotate3d(0, 1, 0, 0); opacity: 1;}
+}
+
+@keyframes show_rotate{
+  from {transform: rotate(0); opacity: 0;}
+  to {transform: rotate(180deg); opacity: 1;}
+}
+@-webkit-keyframes show_rotate {
+  from {-webkit-transform: rotate(0); opacity: 0;}
+  to {-webkit-transform: rotate(180deg); opacity: 1;}
+}
+@-moz-keyframes show_rotate {
+  from {-moz-transform: rotate(0); opacity: 0;}
+  to {-moz-transform: rotate(180deg); opacity: 1;}
+}
+
+@keyframes hide_rotate_y{
+  from {transform: rotate3d(0, 1, 0, 0); opacity: 1;}
+  to {transform: rotate3d(0, 1, 0, 90deg); opacity: 0;}
+}
+@-webkit-keyframes hide_rotate_y {
+  from {-webkit-transform: rotate3d(0, 1, 0, 0); opacity: 1;}
+  to {-webkit-transform: rotate3d(0, 1, 0, 90deg); opacity: 0;}
+}
+@-moz-keyframes hide_rotate_y {
+  from {-moz-transform: rotate3d(0, 1, 0, 0); opacity: 1;}
+  to {-moz-transform: rotate3d(0, 1, 0, 90deg); opacity: 0;}
+}
+
+@keyframes hide_to_left{
+  from {transform: translateX(0px); opacity: 1;}
+  to {transform: translateX(-70px); opacity: 0;}
+}
+@-webkit-keyframes hide_to_left {
+  from {-webkit-transform: translateX(0px); opacity: 1;}
+  to {-webkit-transform: translateX(-70px); opacity: 0;}
+}
+@-moz-keyframes hide_to_left {
+  from {-moz-transform: translateX(0px); opacity: 0;}
+  to {-moz-transform: translateX(-70px); opacity: 1;}
+}
+
+@keyframes hide_to_right{
+  from {transform: translateX(0px); opacity: 1;}
+  to {transform: translateX(70px); opacity: 0;}
+}
+@-webkit-keyframes hide_to_right {
+  from {-webkit-transform: translateX(0px); opacity: 1;}
+  to {-webkit-transform: translateX(70px); opacity: 0;}
+}
+@-moz-keyframes hide_to_right {
+  from {-moz-transform: translateX(0px); opacity: 0;}
+  to {-moz-transform: translateX(70px); opacity: 1;}
+}
+
+
+@keyframes hide_to_bottom{
+  from {transform: translateY(0px); opacity: 1;}
+  to {transform: translateY(70px); opacity: 0;}
+}
+@-webkit-keyframes hide_to_bottom {
+  from {-webkit-transform: translateY(0px); opacity: 1;}
+  to {-webkit-transform: translateY(70px); opacity: 0;}
+}
+@-moz-keyframes hide_to_bottom {
+  from {-moz-transform: translateY(0px); opacity: 0;}
+  to {-moz-transform: translateY(70px); opacity: 1;}
+}
+
+@keyframes scale_from_little{
+  from {transform: scale(0.1); opacity: 1;}
+  to {transform: scale(1.5); opacity: 0;}
+}
+@-webkit-keyframes scale_from_little {
+  from {-webkit-transform: scale(0.1); opacity: 1;}
+  to {-webkit-transform: scale(1.5); opacity: 0;}
+}
+@-moz-keyframes scale_from_little {
+  from {-moz-transform: scale(0.1); opacity: 1;}
+  to {-moz-transform: scale(1.5); opacity: 0;}
+}
+
+@keyframes scale_up_litter{
+  from {transform: scale(1); opacity: 1;}
+  to {transform: scale(1.8); opacity: 0;}
+}
+@-webkit-keyframes scale_up_litter {
+  from {-webkit-transform: scale(1); opacity: 1;}
+  to {-webkit-transform: scale(1.8); opacity: 0;}
+}
+@-moz-keyframes scale_up_litter {
+  from {-moz-transform: scale(1); opacity: 1;}
+  to {-moz-transform: scale(1.8); opacity: 0;}
+}
+
+
+//缩小
+@keyframes scale_down_small{
+  from {transform: scale(1);}
+  to {transform: scale(0.8);}
+}
+@-webkit-keyframes scale_down_small {
+  from {-webkit-transform: scale(1);}
+  to {-webkit-transform: scale(0.8);}
+}
+@-moz-keyframes scale_down_small {
+  from {-moz-transform: scale(1);}
+  to {-moz-transform: scale(0.8);}
+}
+
+//放大
+@keyframes scale_up_small{
+  from {transform: scale(1);}
+  to {transform: scale(1.1);}
+}
+@-webkit-keyframes scale_up_small {
+  from {-webkit-transform: scale(1);}
+  to {-webkit-transform: scale(1.1);}
+}
+@-moz-keyframes scale_up_small {
+  from {-moz-transform: scale(1);}
+  to {-moz-transform: scale(1.1);}
+}
+
+// show from hide
+@keyframes show_from_hide{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

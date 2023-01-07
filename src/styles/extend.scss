@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+%flexBasicStyle {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+%basicFontStyle {
+  font-size: 13px;
+  color: $regularText;
+}
+
+%ellopsisStyle {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;    
+  word-break: keep-all;
+}
+
+%borderHover {
+  transition: 0.5s;
+  box-shadow:-1px 2px 9px #333333;
+}

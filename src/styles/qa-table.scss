@@ -1,0 +1,187 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/extend.scss';
+@import '@/styles/animation.scss';
+
+.table-item-content-ellopsis{
+  width: 100%;
+  padding: 0 10px;
+  @include flexStyle(flex-start, center);
+  @extend %ellopsisStyle;
+  span {
+    width: 100%;
+    display: inline-block;
+    @extend %ellopsisStyle;
+    letter-spacing: 0.4px;
+  }
+}
+
+.qa-table.dark {
+  background-color: #2f4156;
+  color: #fff;
+  .el-table__row {
+    background: transparent;
+    &.el-table__row--striped {
+      .el-table__cell {
+        background-color: #2f4156!important;
+      }
+    }
+    &.hover-row {
+      background: #4d4d4e!important;
+      .el-table__cell {
+        background: transparent;
+      }
+    }
+    &.current-row {
+      background: #4d4d4e!important;
+      .el-table__cell {
+        background: transparent;
+      }
+    }
+  }
+  // .el-table__row--striped {
+  //   background-color: #2b2e35;
+  // }
+}
+.qa-table-hover {
+  table tbody{
+    .el-table__row {
+      // transition: all 0.2s; 
+      td .cell {
+        transition: all 0.2s; 
+      }
+      &.hover-row {
+        td .cell {
+          // font-weight: bold;
+          @include setAnimation(table_hover_scale 0.2s linear forwards);
+        }
+      }
+    }
+  }  
+}
+
+
+@keyframes table_hover_scale{
+  from {transform: scale(1);}
+  to {transform: scale(1.05);}
+}
+@-webkit-keyframes table_hover_scale {
+  from {-webkit-transform: scale(1);}
+  to {-webkit-transform: scale(1.05);}
+}
+@-moz-keyframes table_hover_scale {
+  from {-moz-transform: scale(1);}
+  to {-moz-transform: scale(1.05); }
+}
+
+.execution-status-item {
+  color: $regularText;
+  span {
+    font-weight: 400;
+    font-size: 13px;
+  }
+  i, .svg-icon {
+    color: $info;
+  }
+  &.danger {
+    // color: $danger;
+    i, .svg-icon{
+      color: $danger;
+    }
+  }
+  &.success {
+    // color: $success;
+    i, .svg-icon{
+      color: $success;
+    }
+  }
+  &.primary {
+    // color: $primary;
+    i, .svg-icon{
+      color: $primary;
+    }
+  }
+  &.warning {
+    // color: $warning;
+    i, .svg-icon{
+      color: $warning;
+    }
+  }
+}
+
+.list-mix-item {
+  width: 100%;
+  @include flexStyle(flex-start, center);
+
+  .list-link-item {
+    width: calc(100% - 25px); 
+  }
+}
+
+.list-link-item {
+  width: 100%;
+  .el-link {
+    max-width: 100%;
+    font-size: 12px;
+    i, .svg-icon {
+      font-size: 12px;
+      margin-right: 10px;
+    }
+    > span {
+      width: 100%;
+      display: inline-block;
+      @extend %ellopsisStyle;
+    }
+  }
+}
+
+.avatar-item {
+  width: 100%;
+  @include flexStyle(flex-start, center);
+  .el-avatar {
+    margin-right: 8px;
+  }
+}
+// 表内部icon+span
+.list-item {
+  width: 100%;
+  @include flexStyle(flex-start, center);
+  @include iconStyle(10px, $primary, 0 10px 0 0);
+  span {
+    display: inline-block;
+    width: calc(100% - 20px);
+    @extend %ellopsisStyle;
+  }
+}
+
+// 表内部不同status
+.list-status-item {
+  text-align: left;
+  span {
+    margin-left: 5px;
+  }
+  &.pass {
+    color: $success;
+  }
+  &.warning {
+    color: $warning;
+  }
+  &.fail {
+    color: $danger;
+  }
+  &.main {
+    color: $menuActiveText;
+  }
+  &.default svg{
+    color: $info;
+  }
+}
+
+.list-status-tag {
+  span {
+    width: 80px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    @include transformStyle(scale(0.9));
+  }
+}

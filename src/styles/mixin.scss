@@ -1,0 +1,44 @@
+@import './variables.scss';
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin flexStyle ($justifyContent: center, $alignItems: center, $flexDirection: row) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $flexDirection;
+}
+
+@mixin spanStyle ($fontSize: 15px, $color: #606266) {
+  font-size: $fontSize;
+  color: $color;
+}
+
+@mixin iconStyle($fontSize: 10px, $color: $primary, $margin: 0) {
+  i, .svg-icon {
+    margin: $margin;
+    font-size: $fontSize;
+    width: $fontSize;
+    height: $fontSize;
+    color: $color;
+  }
+}
+
+@mixin transformStyle($transform) {
+  transform: $transform;
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -moz-transform: $transform;
+}
